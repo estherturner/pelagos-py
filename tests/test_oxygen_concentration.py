@@ -1,9 +1,9 @@
 """Tests the step 'Derive Oxygen Concentration' (src/pelagos_py/steps/processing/oxygen.py)."""
 
-from pelagos_py.steps.processing import oxygen
-
 import numpy as np
 import xarray as xr
+
+from pelagos_py.steps.processing import oxygen
 
 DeriveOxygenConcentration = oxygen.DeriveOxygenConcentration
 

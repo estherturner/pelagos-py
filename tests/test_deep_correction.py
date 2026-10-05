@@ -1,11 +1,12 @@
 """Tests the step 'Deep Correction' (src/pelagos_py/steps/processing/deep_correction.py)."""
 
-from pelagos_py.steps.processing import deep_correction
-
 import logging
+
 import numpy as np
-import xarray as xr
 import pytest
+import xarray as xr
+
+from pelagos_py.steps.processing import deep_correction
 
 DeepCorrection = deep_correction.deep_correction
 MIN_DEEP_THRESHOLD = deep_correction.MIN_DEEP_THRESHOLD

@@ -5,10 +5,10 @@ Unlike ``filter_qc`` it never touches the dataset: excluded samples still receiv
 the step's correction, they just do not inform it.
 """
 
-from pelagos_py.utils import qc_handling
-
 import numpy as np
 import xarray as xr
+
+from pelagos_py.utils import qc_handling
 
 QCHandlingMixin = qc_handling.QCHandlingMixin
 DEFAULT_CALCULATION_FLAGS = qc_handling.DEFAULT_CALCULATION_FLAGS

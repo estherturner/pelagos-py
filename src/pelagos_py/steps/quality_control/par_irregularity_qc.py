@@ -21,20 +21,22 @@ QC tests to identify irregularities in PAR profiles based on La Forgia & Organel
 """
 
 #### Mandatory imports ####
-from IPython.core.pylabtools import figsize
-from pelagos_py.steps.base_qc import BaseQC, register_qc, flag_cols
+import warnings
+from datetime import datetime
+
+import matplotlib as mpl
 
 #### Custom imports ####
 import matplotlib.pyplot as plt
-import matplotlib as mpl
 import numpy as np
-from scipy.stats import shapiro
-from scipy.interpolate import interp1d
-from datetime import datetime
-import warnings
-import xarray as xr
 import pandas as pd
 import pvlib
+import xarray as xr
+from IPython.core.pylabtools import figsize
+from scipy.interpolate import interp1d
+from scipy.stats import shapiro
+
+from pelagos_py.steps.base_qc import BaseQC, flag_cols, register_qc
 
 
 # Functions written and provided by Thomas Ryan-Keogh based off of (https://doi.org/10.1002/lom3.10701)

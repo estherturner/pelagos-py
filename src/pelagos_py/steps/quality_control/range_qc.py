@@ -17,15 +17,14 @@
 """Unified range QC test: flags values outside a good band or inside an impossible one."""
 
 #### Mandatory imports ####
-import numpy as np
-from pelagos_py.steps.base_qc import BaseQC, register_qc
-
 #### Custom imports ####
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
 import xarray as xr
-from pelagos_py.utils import fig_spec
 
+from pelagos_py.steps.base_qc import BaseQC, register_qc
+from pelagos_py.utils import fig_spec
 
 # Argo flag-merge matrix for propagating flags onto a companion: merging an existing
 # flag (row) with a new one (column) gives QC_COMBINATRIX[existing, new], so a worse

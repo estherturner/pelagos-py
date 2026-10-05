@@ -17,25 +17,26 @@
 """Writes reports on the current data passed through the pipeline."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-import pelagos_py.utils.diagnostics as di
+import getpass
+import json
+import platform
+import subprocess
+from datetime import datetime, timezone
+from importlib.metadata import PackageNotFoundError, version
+from pathlib import Path
+
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
+import matplotlib.pyplot as plt
+import numpy as np
+import xarray as xr
 
 #### Custom imports ####
 from rstcloth import RstCloth
-from datetime import datetime, timezone
-import getpass
-import platform
-import subprocess
-import json
-from importlib.metadata import version, PackageNotFoundError
-import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
-import cartopy.feature as cfeature
-import xarray as xr
 from tqdm import tqdm
-import numpy as np
 
-from pathlib import Path
+import pelagos_py.utils.diagnostics as di
+from pelagos_py.steps.base_step import BaseStep, register_step
 
 #   Handle Sphinx-incompatible items with math
 REPLACEMENTS = {

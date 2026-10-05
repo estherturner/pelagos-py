@@ -4,11 +4,11 @@ Focused on QC handling: flagged samples must not inform the estimate or anchor t
 interpolants, while still receiving the corrections themselves.
 """
 
-from pelagos_py.steps.processing.salinity import AdjustSalinity
-
 import numpy as np
 import pytest
 import xarray as xr
+
+from pelagos_py.steps.processing.salinity import AdjustSalinity
 
 #: Sized so profiles span over an hour with > 3 * filter_window_size samples, which correct_ct_lag requires.
 SAMPLES_PER_PROFILE = 1200

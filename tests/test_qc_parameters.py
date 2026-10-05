@@ -4,11 +4,10 @@ import logging
 
 import pytest
 
+from pelagos_py.steps.quality_control.impossible_date_qc import impossible_date_qc
 from pelagos_py.steps.quality_control.range_qc import range_qc
 from pelagos_py.steps.quality_control.spike_qc import spike_qc
-from pelagos_py.steps.quality_control.impossible_date_qc import impossible_date_qc
 from pelagos_py.utils.valid_config_check import check_pipeline_variables
-
 
 LOGGER = logging.getLogger("test")
 

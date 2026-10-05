@@ -1,4 +1,5 @@
 import yaml
+
 from pelagos_py.pipeline import Pipeline
 
 # Same pipeline as examples/configs/example_config_nelson.yaml, but defined inline and

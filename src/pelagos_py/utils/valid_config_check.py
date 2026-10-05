@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pelagos_py.steps import STEP_CLASSES, QC_CLASSES
+from pelagos_py.steps import QC_CLASSES, STEP_CLASSES
 from pelagos_py.utils import parameter_spec
 
 STANDARD_VARIABLES = {"TIME", "LATITUDE", "LONGITUDE", "PRES", "TEMP", "CNDC"}

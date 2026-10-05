@@ -17,16 +17,17 @@
 """Class definition for deriving CTD variables."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
 import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps.base_step import BaseStep, register_step
+from pelagos_py.utils import fig_spec
 
 #### Custom imports ####
 from pelagos_py.utils.processing_utils import interpolate_by_time
-import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
-from pelagos_py.utils import fig_spec
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 
 @register_step

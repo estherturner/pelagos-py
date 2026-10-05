@@ -17,13 +17,14 @@
 """QC test to flag entire glider profiles based on number of bad flags."""
 
 #### Mandatory imports ####
-import numpy as np
-from pelagos_py.steps.base_qc import BaseQC, register_qc
+import matplotlib
 
 #### Custom imports ####
 import matplotlib.pyplot as plt
+import numpy as np
 import xarray as xr
-import matplotlib
+
+from pelagos_py.steps.base_qc import BaseQC, register_qc
 from pelagos_py.utils import fig_spec
 
 

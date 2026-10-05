@@ -1,10 +1,10 @@
 """Tests the step 'Shift Oxygen To CTD' (src/pelagos_py/steps/processing/oxygen.py)."""
 
-from pelagos_py.steps.processing import oxygen
-
 import numpy as np
-import xarray as xr
 import pytest
+import xarray as xr
+
+from pelagos_py.steps.processing import oxygen
 
 ShiftOxygenToCTD = oxygen.ShiftOxygenToCTD
 

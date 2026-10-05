@@ -22,12 +22,13 @@ written to disk when the user asks for it (``output_type``) and an
 """
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
+import re
+from pathlib import Path
 
 #### Custom imports ####
-from compliance_checker.runner import ComplianceChecker, CheckSuite, stdout_redirector
-from pathlib import Path
-import re
+from compliance_checker.runner import CheckSuite, ComplianceChecker, stdout_redirector
+
+from pelagos_py.steps.base_step import BaseStep, register_step
 
 #: The compliance checker's strictness levels map to integer score limits;
 #: "lenient" keeps every priority (1=high … 3=low) in the report.

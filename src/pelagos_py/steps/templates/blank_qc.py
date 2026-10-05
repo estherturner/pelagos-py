@@ -17,12 +17,12 @@
 """Example QC test template, using parts of impossible_date_test as a skeleton."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_qc import BaseQC
-
 #### Custom imports ####
 # any additional imports required for the test go here
 import matplotlib
 import matplotlib.pyplot as plt
+
+from pelagos_py.steps.base_qc import BaseQC
 from pelagos_py.utils import fig_spec  # shared diagnostic-plot style
 
 

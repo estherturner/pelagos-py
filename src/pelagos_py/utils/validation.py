@@ -16,26 +16,25 @@
 
 # validation.py
 
-import os
 import glob
+import os
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import xarray as xr
-import matplotlib.pyplot as plt
-
-from pelagos_py.utils.diagnostics import summarising_profiles
+from testing.sandbox import target_ds_raw
 
 from pelagos_py.utils.alignment import (
-    interpolate_DEPTH,
     aggregate_vars,
-    find_profile_pair_metadata,
-    merge_pairs_from_filtered_aggregates,
     compute_r2_for_merged_profiles_xr,
-    plot_r2_heatmaps_per_pair,
     filter_xarray_by_profile_ids,
+    find_profile_pair_metadata,
+    interpolate_DEPTH,
+    merge_pairs_from_filtered_aggregates,
+    plot_r2_heatmaps_per_pair,
 )
-
-from testing.sandbox import target_ds_raw
+from pelagos_py.utils.diagnostics import summarising_profiles
 
 
 def load_device_folder_to_xarray(

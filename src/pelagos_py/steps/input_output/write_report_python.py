@@ -23,36 +23,36 @@ so no external toolchain (LaTeX, Sphinx) is required to produce the PDF.
 #   Builds on the original write-report work by Aaron Mau.
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-import pelagos_py.utils.diagnostics as di
-import pelagos_py.utils.palettes as palettes
+import getpass
+import json
+import os
+import platform
+import shutil
+import tempfile
+from datetime import datetime, timezone
+from importlib.metadata import PackageNotFoundError, version
+
+import matplotlib.pyplot as plt
+import numpy as np
+import xarray as xr
+import yaml
 
 #### Custom imports ####
 from fpdf import FPDF
 from fpdf.enums import (
-    XPos,
-    YPos,
-    WrapMode,
     MethodReturnValue,
     TableBordersLayout,
     TableCellStyle,
+    WrapMode,
+    XPos,
+    YPos,
 )
 from fpdf.fonts import FontFace
-from datetime import datetime, timezone
-import getpass
-import os
-import platform
-import json
-import shutil
-import tempfile
-import yaml
-from importlib.metadata import version, PackageNotFoundError
-import matplotlib.pyplot as plt
-import xarray as xr
-import numpy as np
 
+import pelagos_py.utils.diagnostics as di
+import pelagos_py.utils.palettes as palettes
+from pelagos_py.steps.base_step import BaseStep, register_step
 from pelagos_py.utils.console import progress_bar
-
 
 #   The core PDF fonts are latin-1 only. Map the symbols we expect to plain
 #   text/latin-1 equivalents so they render rather than raising on output.

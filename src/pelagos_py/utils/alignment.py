@@ -14,17 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import xarray as xr
-import pandas as pd
-import numpy as np
-import warnings
-import os
 import datetime as _dt
+import os
+import warnings
 
-from scipy.stats import pearsonr
-from geopy.distance import geodesic
-from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import xarray as xr
+from geopy.distance import geodesic
+from scipy.stats import pearsonr
+from sklearn.linear_model import LinearRegression
 
 
 def interpolate_DEPTH(

@@ -2,7 +2,6 @@ import pytest
 
 from pelagos_py.utils import parameter_spec
 
-
 SCHEMA = {
     "velocity_threshold": {
         "type": float,

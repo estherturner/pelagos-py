@@ -14,35 +14,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pelagos_py.utils.config_mirror import ConfigMirrorMixin
-
-import os
-import yaml
-from pelagos_py.utils.yaml_loading import safe_load as yaml_safe_load
-import pandas as pd
-import numpy as np
-import xarray as xr
 import datetime as _dt
+import os
+
+import numpy as np
+import pandas as pd
+import xarray as xr
+import yaml
 
 from pelagos_py.pipeline import Pipeline
-from pelagos_py.utils.diagnostics import (
-    summarising_profiles,
-    plot_distance_time_grid,
-    plot_glider_pair_heatmap_grid,
-)
 from pelagos_py.utils.alignment import (
-    interpolate_DEPTH,
     aggregate_vars,
-    merge_pairs_from_filtered_aggregates,
+    collect_xy_from_r2_ds,
+    compute_r2_for_merged_profiles_xr,
     filter_xarray_by_profile_ids,
     find_profile_pair_metadata,
-    compute_r2_for_merged_profiles_xr,
-    plot_r2_heatmaps_per_pair,
-    plot_pair_scatter_grid,
-    collect_xy_from_r2_ds,
     fit_linear_map,
+    interpolate_DEPTH,
+    merge_pairs_from_filtered_aggregates,
+    plot_pair_scatter_grid,
+    plot_r2_heatmaps_per_pair,
+)
+from pelagos_py.utils.config_mirror import ConfigMirrorMixin
+from pelagos_py.utils.diagnostics import (
+    plot_distance_time_grid,
+    plot_glider_pair_heatmap_grid,
+    summarising_profiles,
 )
 from pelagos_py.utils.validation import validate
+from pelagos_py.utils.yaml_loading import safe_load as yaml_safe_load
 
 
 class PipelineManager(ConfigMirrorMixin):

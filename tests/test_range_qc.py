@@ -2,8 +2,8 @@
 (src/pelagos_py/steps/quality_control/range_qc.py)."""
 
 import numpy as np
-import xarray as xr
 import pytest
+import xarray as xr
 
 from pelagos_py.steps.quality_control.range_qc import range_qc
 

@@ -1,10 +1,11 @@
-import pytest
-import xarray as xr
-import numpy as np
 from unittest.mock import patch
 
-from pelagos_py.steps.quality_control.position_on_land_qc import position_on_land_qc
+import numpy as np
+import pytest
+import xarray as xr
 from utils.test_utils import create_mock_dataset
+
+from pelagos_py.steps.quality_control.position_on_land_qc import position_on_land_qc
 
 
 def test_missing_variables():

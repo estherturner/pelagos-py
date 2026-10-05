@@ -1,9 +1,9 @@
 """Tests cross_section_figure (src/pelagos_py/steps/input_output/write_report_python.py)."""
 
-from pelagos_py.steps.input_output import write_report_python as wrp
-
 import numpy as np
 import xarray as xr
+
+from pelagos_py.steps.input_output import write_report_python as wrp
 
 cross_section_figure = wrp.cross_section_figure
 

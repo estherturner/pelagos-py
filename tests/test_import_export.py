@@ -1,10 +1,13 @@
-import pytest
 import json
-from pelagos_py.steps.input_output.export import ExportStep
 from unittest.mock import MagicMock, patch
-import xarray as xr
+
 import numpy as np
 import pandas as pd
+import pytest
+import xarray as xr
+
+from pelagos_py.steps.input_output.export import ExportStep
+
 
 #   Fake data borrowed from write_report
 @pytest.fixture

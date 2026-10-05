@@ -18,15 +18,17 @@
 A module for diagnostic plotting and data summarization.
 """
 
+from typing import Dict, List, Optional
+
+import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 import seaborn as sns
 import xarray as xr
-import pandas as pd
-import numpy as np
-import matplotlib.dates as mdates
 from geopy.distance import geodesic
-from pelagos_py.utils.time import safe_median_datetime, add_datetime_secondary_xaxis
-from typing import Dict, List, Optional
+
+from pelagos_py.utils.time import add_datetime_secondary_xaxis, safe_median_datetime
 
 
 def plot_time_series(

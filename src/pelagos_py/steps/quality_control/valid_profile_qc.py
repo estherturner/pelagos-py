@@ -17,14 +17,15 @@
 """QC tests for assessing validity of a glider profile, based on different definitions of successful data."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_qc import BaseQC, register_qc
+import matplotlib
 
 #### Custom imports ####
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import xarray as xr
-import matplotlib
+
+from pelagos_py.steps.base_qc import BaseQC, register_qc
 from pelagos_py.utils import fig_spec
 
 

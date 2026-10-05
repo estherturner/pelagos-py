@@ -1,10 +1,10 @@
 """Tests the steps 'BBP from Beta' and 'Isolate BBP Spikes' (src/pelagos_py/steps/processing/bbp.py)."""
 
-from pelagos_py.steps.processing import bbp
-
 import numpy as np
 import pytest
 import xarray as xr
+
+from pelagos_py.steps.processing import bbp
 
 BBPFromBeta = bbp.BBPFromBeta
 IsolateBBPSpikes = bbp.IsolateBBPSpikes

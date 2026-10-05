@@ -1,9 +1,9 @@
 """Tests the step 'Interpolate PAR' (src/pelagos_py/steps/processing/interpolate_par.py)."""
 
-from pelagos_py.steps.processing import interpolate_par as ipar
-
 import numpy as np
 import pytest
+
+from pelagos_py.steps.processing import interpolate_par as ipar
 
 estimate_euphotic_depth = ipar.estimate_euphotic_depth
 depth_of_ipar = ipar.depth_of_ipar

@@ -1,10 +1,10 @@
 """Tests the step 'CHLA Quenching' (src/pelagos_py/steps/processing/chla_quenching.py)."""
 
-from pelagos_py.steps.processing import chla_quenching
-
 import numpy as np
-import xarray as xr
 import pytest
+import xarray as xr
+
+from pelagos_py.steps.processing import chla_quenching
 
 Quenching = chla_quenching.chla_quenching_correction
 

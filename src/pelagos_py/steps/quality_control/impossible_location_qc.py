@@ -17,13 +17,14 @@
 """QC test to identify impossible locations in LATITUDE and LONGITUDE variables."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_qc import BaseQC, register_qc
+import matplotlib
+import matplotlib.pyplot as plt
 
 #### Custom imports ####
 import numpy as np
 import xarray as xr
-import matplotlib
-import matplotlib.pyplot as plt
+
+from pelagos_py.steps.base_qc import BaseQC, register_qc
 from pelagos_py.utils import fig_spec
 
 

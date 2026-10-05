@@ -1,5 +1,5 @@
-import xarray as xr
 import numpy as np
+import xarray as xr
 
 
 def create_mock_dataset(lats=None, lons=None, times=None):

@@ -17,15 +17,16 @@
 """QC test to identify impossible speeds in glider data."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_qc import BaseQC, register_qc
+import matplotlib
 
 #### Custom imports ####
 import matplotlib.pyplot as plt
-from pelagos_py.utils.processing_utils import interpolate_by_time
-import xarray as xr
 import numpy as np
-import matplotlib
+import xarray as xr
+
+from pelagos_py.steps.base_qc import BaseQC, register_qc
 from pelagos_py.utils import fig_spec
+from pelagos_py.utils.processing_utils import interpolate_by_time
 
 
 @register_qc

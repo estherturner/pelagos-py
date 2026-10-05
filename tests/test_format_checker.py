@@ -1,10 +1,11 @@
 """Tests the step 'Format Checker'."""
 
 #   Test module import
-from pelagos_py.steps.input_output import format_check
+from unittest.mock import MagicMock, patch
 
 import pytest
-from unittest.mock import patch, MagicMock
+
+from pelagos_py.steps.input_output import format_check
 
 FormatCheck = format_check.FormatCheck
 

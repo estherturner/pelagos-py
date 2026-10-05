@@ -22,15 +22,16 @@ chlorophyll fluorescence but works for any variable with a deep signal-free
 region (the offset and thresholds are all parameters)."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
 
 #### Custom imports ####
 import xarray as xr
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib as mpl
+
 import pelagos_py.utils.palettes as palettes
+from pelagos_py.steps.base_step import BaseStep, register_step
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 # A depth_threshold shallower than this warns the user.
 MIN_DEEP_THRESHOLD = 300

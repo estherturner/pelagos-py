@@ -17,9 +17,9 @@
 """Example step template. Copy and populate this example, which will inherit additional functionality from BaseStep."""
 
 #### Mandatory imports ####
+import pelagos_py.utils.diagnostics as diag
 from pelagos_py.steps.base_step import BaseStep, register_step
 from pelagos_py.utils.qc_handling import QCHandlingMixin
-import pelagos_py.utils.diagnostics as diag
 
 #### Custom imports ####
 

@@ -1,16 +1,18 @@
 """Tests the step 'Write Data Report (Python)' (fpdf2-based report)."""
 
 #   Test module import
-from pelagos_py.steps.input_output import write_report_python as wrp
-import pytest
-from unittest.mock import patch, MagicMock
+import json
 
 #   Other imports
 from datetime import datetime, timezone
-import xarray as xr
-import json
-import numpy as np
 from importlib.metadata import PackageNotFoundError
+from unittest.mock import MagicMock, patch
+
+import numpy as np
+import pytest
+import xarray as xr
+
+from pelagos_py.steps.input_output import write_report_python as wrp
 
 
 @pytest.fixture

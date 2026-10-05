@@ -17,19 +17,19 @@
 """Pipeline steps for processing dissolved-oxygen optode data (uncalibrated phase and optode temperature)."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
-import pelagos_py.utils.diagnostics as diag
-
 #### Custom imports ####
 import matplotlib
 import matplotlib.pyplot as plt
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-from pelagos_py.utils import fig_spec
 import numpy as np
 import pandas as pd
 import xarray as xr
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 from scipy.signal import butter, filtfilt
+
+import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps.base_step import BaseStep, register_step
+from pelagos_py.utils import fig_spec
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 
 def check_config(self, expected_params):

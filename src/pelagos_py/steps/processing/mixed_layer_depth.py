@@ -17,16 +17,16 @@
 """Pipeline step for calculating the mixed layer depth (MLD) of each profile."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
-import pelagos_py.utils.diagnostics as diag
-import pelagos_py.utils.palettes as palettes
-
 #### Custom imports ####
 import gsw
-import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
+
+import pelagos_py.utils.diagnostics as diag
+import pelagos_py.utils.palettes as palettes
+from pelagos_py.steps.base_step import BaseStep, register_step
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 # Dataset variables each method reads; density is derived here as potential density.
 METHOD_INPUTS = {"density": ["ABS_SALINITY", "CONS_TEMP"], "temp": ["TEMP"]}

@@ -17,9 +17,10 @@
 """Class definition for exporting data steps."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-import pelagos_py.utils.diagnostics as diag
 import json
+
+import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps.base_step import BaseStep, register_step
 
 
 @register_step

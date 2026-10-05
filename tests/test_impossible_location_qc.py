@@ -1,12 +1,13 @@
+from unittest.mock import patch
+
+import numpy as np
 import pytest
 import xarray as xr
-import numpy as np
-from unittest.mock import patch
+from utils.test_utils import create_mock_dataset
 
 from pelagos_py.steps.quality_control.impossible_location_qc import (
     impossible_location_qc,
 )
-from utils.test_utils import create_mock_dataset
 
 
 def test_missing_variables():

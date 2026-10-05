@@ -15,16 +15,14 @@
 # limitations under the License.
 """This module defines the base class for pipeline steps and configurations."""
 
-from pelagos_py.utils.config_mirror import ConfigMirrorMixin
-from pelagos_py.utils import parameter_spec
-from pelagos_py.utils.log_levels import STOP
-from pelagos_py.utils import parameter_spec
-from pelagos_py.utils.log_levels import STOP
-import warnings
 import logging
 import os
 import time
-import time
+import warnings
+
+from pelagos_py.utils import parameter_spec
+from pelagos_py.utils.config_mirror import ConfigMirrorMixin
+from pelagos_py.utils.log_levels import STOP
 
 REGISTERED_STEPS = {}
 """Registry of explicitly registered step classes."""
@@ -285,7 +283,9 @@ class BaseStep(ConfigMirrorMixin):
 
     def save_config(self, path: str | None = None):
         """Save this step's config to YAML (for standalone debugging)."""
-        import yaml, os
+        import os
+
+        import yaml
 
         cfg = self.generate_config()
         if path is None:

@@ -24,12 +24,13 @@ upstream input files are fixed.
 """
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
+import matplotlib
+import matplotlib.pyplot as plt
 
 #### Custom imports ####
 import numpy as np
-import matplotlib
-import matplotlib.pyplot as plt
+
+from pelagos_py.steps.base_step import BaseStep, register_step
 from pelagos_py.utils import fig_spec
 
 

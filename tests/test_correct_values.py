@@ -1,11 +1,11 @@
 """Tests the step 'Correct Values' (src/pelagos_py/steps/input_output/correct_values.py)."""
 
 #   Test module import
-from pelagos_py.steps.input_output import correct_values
-
 import numpy as np
-import xarray as xr
 import pytest
+import xarray as xr
+
+from pelagos_py.steps.input_output import correct_values
 
 CorrectValues = correct_values.CorrectValues
 

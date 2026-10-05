@@ -17,16 +17,17 @@
 """QC test that identifies glider positions not located on land and flags accordingly."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_qc import BaseQC, register_qc
+import geopandas
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import shapely as sh
+import xarray as xr
 
 #### Custom imports ####
 from geodatasets import get_path
-import matplotlib.pyplot as plt
-import shapely as sh
-import numpy as np
-import xarray as xr
-import matplotlib
-import geopandas
+
+from pelagos_py.steps.base_qc import BaseQC, register_qc
 from pelagos_py.utils import fig_spec
 
 

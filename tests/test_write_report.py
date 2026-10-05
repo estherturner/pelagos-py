@@ -1,19 +1,21 @@
 """Tests the step 'Write Report'"""
 
 #   Test module import
-from pelagos_py.steps.input_output import write_report
-import pytest
-from unittest.mock import (
-    patch,
-    MagicMock,
-)  #   Patch for OS, MagicMock for .rst stream object and function calls
+import json
 
 #   Other imports
 from datetime import datetime, timezone
-import xarray as xr
-import json
-import numpy as np
 from importlib.metadata import PackageNotFoundError
+from unittest.mock import (
+    MagicMock,
+    patch,
+)  #   Patch for OS, MagicMock for .rst stream object and function calls
+
+import numpy as np
+import pytest
+import xarray as xr
+
+from pelagos_py.steps.input_output import write_report
 
 
 @pytest.fixture

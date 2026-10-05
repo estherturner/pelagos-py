@@ -22,15 +22,16 @@ profiles without usable PAR. See :class:`InterpolatePAR` for details.
 """
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
+import matplotlib
+import matplotlib.pyplot as plt
 
 #### Custom imports ####
 import numpy as np
 import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
+
+from pelagos_py.steps.base_step import BaseStep, register_step
 from pelagos_py.utils import fig_spec
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 
 def estimate_euphotic_depth(par, depth):

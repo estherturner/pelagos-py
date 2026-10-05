@@ -17,18 +17,19 @@
 """Pipeline steps for deriving particulate backscatter (BBP) from beta and isolating BBP spikes."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
-from pelagos_py.utils.processing_utils import *
-import pelagos_py.utils.diagnostics as diag
+import glidertools as gt
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
 
 #### Custom imports ####
 import xarray as xr
-import matplotlib.pyplot as plt
-import matplotlib as mpl
-import numpy as np
-import glidertools as gt
+
+import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps.base_step import BaseStep, register_step
 from pelagos_py.utils import fig_spec
+from pelagos_py.utils.processing_utils import *
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 
 @register_step

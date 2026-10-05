@@ -17,14 +17,16 @@
 """QC test to identify impossible dates in TIME variable."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_qc import BaseQC, register_qc
+from datetime import datetime
+
+import matplotlib
+import matplotlib.pyplot as plt
 
 #### Custom imports ####
 import numpy as np
 import xarray as xr
-from datetime import datetime
-import matplotlib
-import matplotlib.pyplot as plt
+
+from pelagos_py.steps.base_qc import BaseQC, register_qc
 from pelagos_py.utils import fig_spec
 
 

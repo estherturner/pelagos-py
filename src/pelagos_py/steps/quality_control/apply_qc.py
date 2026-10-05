@@ -17,14 +17,16 @@
 """Class definition for quality control steps."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-import pelagos_py.utils.diagnostics as diag
-from pelagos_py.steps import QC_CLASSES
+import json
+
+import numpy as np
 
 #### Custom imports ####
 import xarray as xr
-import numpy as np
-import json
+
+import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps import QC_CLASSES
+from pelagos_py.steps.base_step import BaseStep, register_step
 
 
 @register_step

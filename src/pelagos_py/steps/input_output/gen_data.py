@@ -16,11 +16,13 @@
 
 """Step for generating synthetic data for testing pipelines"""
 
+from datetime import date, timedelta
+
+import numpy as np
 import pandas as pd
 import xarray as xr
-import numpy as np
+
 from pelagos_py.steps.base_step import BaseStep, register_step
-from datetime import date, timedelta
 
 
 @register_step

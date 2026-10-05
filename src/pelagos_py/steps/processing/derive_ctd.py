@@ -17,17 +17,18 @@
 """Pipeline step for deriving CTD variables (salinity, density, depth) using the GSW toolbox."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
-import pelagos_py.utils.diagnostics as diag
-
-#### Custom imports ####
-import numpy as np
 import gsw
 import matplotlib
 import matplotlib.pyplot as plt
+
+#### Custom imports ####
+import numpy as np
+
+import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps.base_step import BaseStep, register_step
 from pelagos_py.utils import fig_spec
 from pelagos_py.utils.processing_utils import cndc_scale_factor
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 
 @register_step

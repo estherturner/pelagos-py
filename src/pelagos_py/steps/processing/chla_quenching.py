@@ -17,19 +17,20 @@
 """Pipeline step for correcting chlorophyll-a fluorescence for non-photochemical quenching."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
-import pelagos_py.utils.diagnostics as diag
-import pelagos_py.utils.palettes as palettes
-
-#### Custom imports ####
-import xarray as xr
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pvlib
-import matplotlib.pyplot as plt
-import matplotlib as mpl
+
+#### Custom imports ####
+import xarray as xr
 from scipy.stats import linregress
+
+import pelagos_py.utils.diagnostics as diag
+import pelagos_py.utils.palettes as palettes
+from pelagos_py.steps.base_step import BaseStep, register_step
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 CALC_SUFFIX = "__FOR_CALC"  # suffix of the QC-masked calculation-only copies; see run().
 

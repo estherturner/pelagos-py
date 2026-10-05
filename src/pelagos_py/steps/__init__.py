@@ -21,15 +21,17 @@ This module contains the logic to dynamically discover and register step impleme
 and to instantiate them in a config-aware way.
 """
 
-import os
 import importlib
+import logging
+import os
 import pathlib
 import time
+
 import yaml
-from pelagos_py.utils.yaml_loading import safe_load as yaml_safe_load
-import logging
-from pelagos_py.steps.base_step import REGISTERED_STEPS
+
 from pelagos_py.steps.base_qc import REGISTERED_QC
+from pelagos_py.steps.base_step import REGISTERED_STEPS
+from pelagos_py.utils.yaml_loading import safe_load as yaml_safe_load
 
 # Setup logger for discovery. A console handler is attached here (rather than
 # left to Pipeline._setup_logging) because discover_steps() runs at import

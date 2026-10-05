@@ -16,14 +16,14 @@
 
 """Class definition for finding vertical and horizontal profiles in depth data."""
 
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
-
-import pandas as pd
-import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+from pelagos_py.steps.base_step import BaseStep, register_step
 from pelagos_py.utils import fig_spec
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 # ---------------------------------------------------------------------------
 # Constants

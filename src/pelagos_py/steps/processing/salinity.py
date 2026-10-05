@@ -17,19 +17,20 @@
 """Pipeline step for adjusting and deriving salinity from conductivity, temperature and pressure."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-from pelagos_py.utils.qc_handling import QCHandlingMixin
-import pelagos_py.utils.diagnostics as diag
-from pelagos_py.utils.processing_utils import cndc_scale_factor
+import gsw
+import matplotlib as mpl
 
 #### Custom imports ####
 import matplotlib.pyplot as plt
-import matplotlib as mpl
-from scipy import interpolate
-import xarray as xr
-import pandas as pd
 import numpy as np
-import gsw
+import pandas as pd
+import xarray as xr
+from scipy import interpolate
+
+import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps.base_step import BaseStep, register_step
+from pelagos_py.utils.processing_utils import cndc_scale_factor
+from pelagos_py.utils.qc_handling import QCHandlingMixin
 
 
 def running_average_nan(arr: np.ndarray, window_size: int) -> np.ndarray:

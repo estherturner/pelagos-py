@@ -17,13 +17,14 @@
 """Class definition for loading data steps."""
 
 #### Mandatory imports ####
-from pelagos_py.steps.base_step import BaseStep, register_step
-import pelagos_py.utils.diagnostics as diag
-
-import xarray as xr
-import pandas as pd
-import numpy as np
 from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import xarray as xr
+
+import pelagos_py.utils.diagnostics as diag
+from pelagos_py.steps.base_step import BaseStep, register_step
 
 MIN_YEAR_FILTER = "1990-01-01"
 
